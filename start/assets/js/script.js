@@ -54,8 +54,8 @@ console.log(user.address.cap);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const key ='name'
-console.log(person['key']);
+const key ='name';
+console.log(person[key]);
 
 /* ESERCIZIO 5 — Numero più grande
    Tre numeri a, b, c.
@@ -95,22 +95,44 @@ if(tot>=50){
    console.log('Free Shipping')
 }
 else{
-   console.log(`Total bucket: ${tot} + Shipping: 9.90$ - Total with Shipping: ${tot+9.90}`)
-}
+   console.log(`Total bucket: ${tot} Shipping: 9.90$ - Total with Shipping: ${tot+9.90}`)
+} 
+
+const torCar =
+tot >= 50
+? console.log('Free Shipping',)
+: console.log(`Total bucket: ${tot} Shipping: 9.90$ - Total with Shipping: ${tot+9.90}`,);
+
 /* ESERCIZIO 7 — typeof check
    Crea un array con 3 valori diversi (es. [42, 'ciao', true]).
    Con un for + if, per ogni elemento stampa 'x è un numero' o 'x non è un numero'.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const mix= [35, 'hello', false];
+const myArr= [35, 'hello', true];
+
+for(let i=0;i < myArr.length; i++){
+   if(typeof myArr[i] ==='number'){
+      console.log(`${myArr[i]} è un numero`);
+   }
+      else{
+         console.log(`${myArr[i]} non è un numero`);
+      }
+   
+}
 
 /* ESERCIZIO 8 — Array dei numeri
    Array vuoto. Aggiungi 1..5 con push. Aggiungi 0 all'inizio con unshift.
    Stampa array e length.
 */
 
+
 /* SCRIVI QUI LA TUA RISPOSTA */
+const num =[]
+num.push(1,2,3,4,5);
+console.log(num, num.length);
+
+
 
 /* ESERCIZIO 9 — Carrello con splice
    Array ['Penna', 'Quaderno', 'Zaino', 'Astuccio'].
@@ -118,9 +140,9 @@ const mix= [35, 'hello', false];
    Stampa dopo ogni operazione.
 */
 const cart=['Pen','Notebook','Backpack', 'Case'];
-cart.splice(1);
+cart.splice(1,1);
 console.log(cart);
-cart.splice(1,'Diary');
+cart.splice(1,0,'Diary');
 console.log(cart);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -132,8 +154,19 @@ console.log(cart);
    Con indexOf: stampa la posizione, o 'Non in carrello'.
 */
 const products =['Pen','Notebook','Backpack'];
-console.log('Backpack is in the cart:'+ products.includes('Backpack'))
-console.log(products.indexOf('Backpack'))
+
+let findBackpack= products.includes('Backpack')
+console.log(`Backpack is in the cart: ${findBackpack}`);
+
+   if (findBackpack){
+      let findBackpack=products.indexOf('Backpack')
+   }
+   else{
+      console.log('Not in the Cart')
+   }
+
+
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 
